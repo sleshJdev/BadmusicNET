@@ -1,0 +1,69 @@
+﻿@model IEnumerable<MvcSimpleMusicSite_CourseProject.Models.Track>
+@{
+    ViewBag.Title = "Контент";    
+}
+<table class="table">
+    <tr>
+        <td>
+        </td>
+        <td>
+            @Html.LabelFor(model => model.First().GenreId)
+        </td>
+        <td>
+            @Html.LabelFor(model => model.First().Album.ArtistId)
+        </td>
+        <td>
+            @Html.LabelFor(model => model.First().Title)
+        </td> 
+        <td>
+            @Html.LabelFor(model => model.First().AlbumId)
+        </td>             
+        <td>
+            @Html.LabelFor(model => model.First().Size)
+        </td>
+        <td>
+            @Html.LabelFor(model => model.First().Bitrate)
+        </td>
+        <td>
+            @Html.LabelFor(model => model.First().Time)
+        </td> 
+            <td>
+            @Html.LabelFor(model => model.First().CreateAt)
+        </td>
+        <td>
+        </td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>              
+                @Html.ActionLink("Удалить", "Delete", new { id = item.Id })
+            </td>
+            <td class="genre">
+                @(item.Genre == null ? "None" : item.Genre.Title)
+            </td>
+            <td class="artist">
+                @(item.Album.Artist == null ? "None" : item.Album.Artist.Title)
+            </td>
+            <td class="Title">
+                @item.Title
+            </td>
+            <td>
+                @(item.Album == null ? "None" : item.Album.Title)
+            </td>      
+            <td>
+                @item.Size
+            </td>
+            <td>
+                @item.Bitrate
+            </td>
+            <td>
+                @item.Time.Substring(3, 5)
+            </td>            
+            
+            <td class="createat">
+                @item.CreateAt
+            </td>            
+        </tr>
+    }
+</table>

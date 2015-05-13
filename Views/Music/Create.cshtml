@@ -1,0 +1,35 @@
+@model MvcSimpleMusicSite_CourseProject.Models.Track
+@using MvcSimpleMusicSite_CourseProject.Resources.Views;
+@using MvcSimpleMusicSite_CourseProject.Resources.Views.Shared;
+@{
+    ViewBag.Title = @PagesAndLayotsRes.TitleCreate;
+}
+<div class="span4">
+    <div class="border">
+        <h2 class="home-upload-title">
+            <img src="@Url.Content("~/Content/Images/icon-upload.png")" />
+            @PagesAndLayotsRes.UploadFile</h2>
+        <label for="">
+            @PagesAndLayotsRes.Message1 <small class="home-upload-size">@PagesAndLayotsRes.Message2</small></label>
+        @using (Html.BeginForm("Create", "Music", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {                         
+            <input class="btn" type="file" multiple="multiple" name="fileUpload" />  
+            <input id = "upload" type="submit" class="btn" value=@CommonRes.Upload />           
+        }
+    </div>
+</div>
+<div class="span8">
+    
+        <fieldset>
+            <legend class="text-success"><i><strong>Drag and drop</strong></i></legend>
+            <div class="progress">
+                <div class="bar">
+                </div>
+            </div>
+            <div id="dropZone">
+            </div>
+        </fieldset>
+   
+</div>
+<div class="row-fluid">
+</div>

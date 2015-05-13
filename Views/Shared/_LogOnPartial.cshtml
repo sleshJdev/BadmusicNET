@@ -1,0 +1,22 @@
+﻿
+@using MvcSimpleMusicSite_CourseProject.Resources.Views;
+@using MvcSimpleMusicSite_CourseProject.Resources.Views.Shared;
+
+<div class="navbar">
+    <div class="nav-collapse collapse">
+        @if (Request.IsAuthenticated)
+        {     
+            <p class="text-success">
+                @CommonRes.Hello, <strong>@User.Identity.Name</strong> ! |
+                @Html.ActionLink(@PagesAndLayotsRes.LogOff, "LogOff", "Account", new { area = "" }, null)
+            </p>
+        }
+        else
+        {
+            <ul class="inline">
+                <li class = "first">@Html.ActionLink(@PagesAndLayotsRes.LogOn, "LogOn", "Account", new { area = "" }, null)</li>
+                <li>@Html.ActionLink(@PagesAndLayotsRes.Admin, string.Empty, string.Empty, new { area = "Admin" }, null)</li>
+            </ul>
+        }
+    </div>
+</div>

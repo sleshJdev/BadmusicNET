@@ -1,0 +1,18 @@
+﻿@using MvcSimpleMusicSite_CourseProject.Resources.Views.Shared;
+@using MvcSimpleMusicSite_CourseProject.Resources.Views;
+@using (Html.BeginForm("Search", "Music", FormMethod.Post))
+{
+    <div class="platform">
+        <div class="input-append">
+            <input class="span2" id="appendedInputButtons" type="text" name="searchContext" />
+            <button class="btn btn-danger" type="submit">
+                @CommonRes.Search</button>
+        </div>
+        <div>
+            <i>@PagesAndLayotsRes.SearchMessage1
+            <strong id = "artist"><a href = "#">Avril Lavigne</a></strong>
+        @PagesAndLayotsRes.SearchMessage2 <strong id = "track"><a href = "#">Back in black</a></strong>
+            </i>
+        </div>
+    </div>
+}

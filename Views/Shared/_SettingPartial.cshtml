@@ -1,0 +1,16 @@
+﻿@using MvcSimpleMusicSite_CourseProject.Resources.Views;
+<ul class="nav">
+    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">@PagesAndLayotsRes.Settings
+        <b class="caret"></b></a>
+        <ul id="ul" class="dropdown-menu">
+            <li class="nav-header">@PagesAndLayotsRes.Themes</li>
+            <li class="sunny"><a href="#">@PagesAndLayotsRes.Bricks</a></li>
+            <li class="snowy"><a href="#">@PagesAndLayotsRes.Carbon</a></li>
+            <li class="rainy"><a href="#">@PagesAndLayotsRes.VeryBlue</a></li>
+            <li class="default"><a href="#">@PagesAndLayotsRes.Default</a></li>
+            <li class="nav-header">@PagesAndLayotsRes.SelLan</li>
+            <li>@Html.ActionLink("Русский", "SetCulture", "Site", new { lang = "ru", returnUrl = this.Request.RawUrl }, null)</li>
+            <li>@Html.ActionLink("English", "SetCulture", "Site", new { lang = "en", returnUrl = this.Request.RawUrl }, null)</li>
+        </ul>
+    </li>
+</ul>

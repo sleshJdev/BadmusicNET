@@ -1,0 +1,66 @@
+﻿@model MvcSimpleMusicSite_CourseProject.Models.Track
+@using MvcSimpleMusicSite_CourseProject.Resources.Views;
+@using MvcSimpleMusicSite_CourseProject.Resources.Views.Shared;
+@{
+    ViewBag.Title = @PagesAndLayotsRes.TitleIndex;
+    Layout = "~/Views/Shared/_LayoutExtended.cshtml";
+}
+<table class="table">
+    <tr>
+        <td>
+            @Html.LabelFor(model => model.GenreId)
+        </td>
+        <td>
+            @Html.LabelFor(model => model.Album.ArtistId)
+        </td>
+        <td>
+            @Html.LabelFor(model => model.Title)
+        </td>
+        <td>
+            @Html.LabelFor(model => model.AlbumId)
+        </td>        
+        <td>@Html.LabelFor(model => model.Size)
+        </td>
+        <td>@Html.LabelFor(model => model.Bitrate)
+        </td>
+        <td>@Html.LabelFor(model => model.Time)
+        </td>
+        <td>
+            Загрузил
+        </td>
+        <td>
+            @Html.LabelFor(model => model.CreateAt)
+        </td>
+        <td>
+        </td>
+    </tr>
+    <tr class="tr">
+        <td class="genre">
+            @(Model.Genre == null ? "None" : Model.Genre.Title)
+        </td>
+        <td class="artist">
+            @(Model.Album.Artist == null ? "None" : Model.Album.Artist.Title)
+        </td>
+        <td class="Title">
+            @Model.Title
+        </td>
+        <td>
+            @Model.Album.Title
+        </td>        
+        <td>@Model.Size
+        </td>
+        <td>@Model.Bitrate
+        </td>       
+        <td>@Model.Time.Substring(3, 5)
+        </td>         
+             <td>
+            <strong class = "text-info">@ViewBag.User</strong>
+        </td>
+        <td class="createat">
+            @Model.CreateAt.ToString("MM/dd/yyyy")
+        </td>
+        <td>
+            @Html.ActionLink(@CommonRes.Dowload, "Send_Mp3", "Music", new { Id = Model.Id }, null)
+        </td>
+    </tr>
+</table>

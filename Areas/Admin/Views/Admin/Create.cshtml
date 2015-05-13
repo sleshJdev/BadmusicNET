@@ -1,0 +1,16 @@
+@model MvcSimpleMusicSite_CourseProject.Models.Track
+@{
+    ViewBag.Title = "Create";
+}
+<div class="span5 border">
+    <label class="home-upload-label" for="">
+        Выберите файл <small class="home-upload-size">не более 20 Мб </small>
+    </label>
+    @using (Html.BeginForm("Create", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {                         
+        <input class="btn" type="file" name="fileUpload" />       
+                           
+        <input class="btn" type="submit" name="Submit" id="SubmitSingle" value="Загрузить" /> 
+    }
+</div>
+ 

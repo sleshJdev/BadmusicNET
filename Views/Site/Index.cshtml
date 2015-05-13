@@ -1,0 +1,36 @@
+﻿@model IEnumerable<MvcSimpleMusicSite_CourseProject.Models.Track>
+@using MvcSimpleMusicSite_CourseProject.Resources.Views;
+@using MvcSimpleMusicSite_CourseProject.Resources.Views.Shared;
+@{  
+    ViewBag.Title = @PagesAndLayotsRes.TitleIndex;
+    Layout = "~/Views/Shared/_LayoutExtended.cshtml";
+}
+<table class="table table-condensed">
+    @if (null != @Model)
+    {
+        foreach (var item in Model)
+        {        
+        <tr class="tr">
+            <td>
+                @Html.ActionLink(@CommonRes.Details, "Details", new { id = item.Id })
+            </td>
+            <td class="artist">
+                @(item.Album.Artist == null ? "None" : item.Album.Artist.Title)
+            </td>
+            <td class="title">
+                @item.Title
+            </td>
+            <td>
+                <object type="application/x-shockwave-flash" data="dewplayer-vol.swf?mp3=@item.Mp3Url"
+                    width="240" height="18" id="dewplayer">
+                    <param name="wmode" value="transparent" />
+                    <param name="movie" value="dewplayer-vol.swf?mp3=@item.Mp3Url" />
+                </object>
+            </td>
+            <td>
+                @Html.ActionLink(@CommonRes.Dowload, "Send_Mp3", "Music", new { Id = item.Id }, null)
+            </td>
+        </tr>            
+        }
+    }
+</table>

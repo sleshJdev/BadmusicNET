@@ -1,0 +1,333 @@
+   .border
+ {
+     border: 3px solid #eeee21;
+     padding: 40px 0 10px 20px;     
+ }    
+img
+{
+     border-radius:4px;
+}
+body
+{
+    padding:20px;
+} 
+ /*ЗАГРУЗКА ФАЙЛОВ
+==================================*/
+ 
+#img_upload
+ {
+     display:none;
+     height:120px;
+     width:120px;
+     margin-left: 50px;
+     border-radius:200px;
+ }
+ 
+ .home-upload-title
+ {
+    color:#468847;
+    font-style:italic;
+ }
+ .home-upload-size
+ {
+     font-size: 0.8em;
+ }
+ 
+ #dropZone {    
+    color: #555;
+    font-size: 18px;
+    text-align: center;    
+    
+    width: 90%;
+    padding: 50px 0;
+    margin-left: 30px;
+    
+    background: #eee;
+    border: 1px solid #ccc;
+    
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#dropZone.hover {
+    background: #ddd;
+    border-color: #aaa;
+}
+
+#dropZone.error {
+    background: #faa;
+    border-color: #f00;
+}
+
+#dropZone.drop {
+    background: #afa;
+    border-color: #0f0;
+} 
+ 
+ /*Облако тегов
+===============================*/
+ .tagcloud
+ {
+     position:absolute;
+     right: 20px;
+     top:10px;
+     z-index:5;
+ }
+ 
+/*ВЕРХНЯЯ НАВИГАЦИЯ
+===============================*/ 
+ #ul li a
+ {     
+     padding: 0 0 0 35px;
+ } 
+ ul.hor li.first
+{
+    border-left:none;
+}
+ul.hor li
+{
+    display: inline;   
+    border-left: 1px solid #000;
+    padding-left:5px;
+    margin-right:5px;
+}
+.logOn
+{     
+    float: left;
+    width: 240px;    
+}
+.culture
+{
+    background-color: Black;     
+    border: 2px solid #eeee21;
+    padding:0 5px 0 5px;
+    float:left;
+} 
+.setting
+{    
+   width:90px;
+   float: left;
+}
+/*ДОСТУПНЫЕ ТЕМЫ
+=========================*/ 
+body.sunny 
+{
+	background:url(Images/Sunny.jpg) ;
+}
+body.rain 
+{
+	background:url(Images/Rainy.jpg) ;
+}		 
+body.snow 
+{
+	background:url(Images/Snowy.jpg) ;
+}
+body.default
+{
+    background-color: #FFFFFF;
+}
+/*=====================ОТСТУПЫ=======================*/
+.navigation
+{
+    position: relative;
+}
+ .edit
+ {
+     margin-left: 250px;
+ }
+.fieldset
+{
+    margin-left: 150px;
+} 
+.pushmid
+{
+    margin: 0 100px 0 0;
+}
+.margintop200
+{
+    margin-top:200px;
+}
+.merginleft100
+{
+    margin-left: 200px;
+}
+ .pullmid
+{
+    margin-left: 350px;
+}  
+ .margintop20
+{
+    margin-top: 20px;
+}
+.margintop50
+{
+    margin-top: 50px;
+}
+.footer 
+{  
+    padding: 10px 0;
+    text-align: center;
+    line-height: normal;
+    margin: 20px 0 5px 0;    
+    border-radius: 4px 4px 4px 4px; 
+    bottom:0;
+    position:relative;  
+    background-color:Black;      
+     width:100%;  
+} 
+ .footer i
+ {
+     color:White;
+     font-size:0.9em;
+ } 
+/*===========ТЕКСТ==================*/
+.artist 
+{        
+    font-size: 100%;
+    font-family:@Arial Unicode MS;
+    font-style:inherit;
+    color:Purple;
+} 
+.title
+{
+    
+    font-size: 90%;
+    font-family:@GulimChe;
+    font-style:italic;
+    color:Olive;
+}
+.tr
+{
+    border: 2px solid #eeee21;    
+    background-color:ThreeDFace ;   
+    height: 18px;
+}
+.album
+{
+    font-size: 80%;
+    font-family:@MS PGothic;
+    font-style:oblique;
+    color:Green;
+}
+.year
+{
+    font-size: 70%;
+    font-family:@SimSun-ExtB;
+    font-style:normal;
+    color:Red;
+}
+.createat
+{
+    font-size: 90%;
+    font-family:@SimSun-ExtB;
+    font-style:normal;
+    color:Red;
+}
+.votecount
+{
+    font-size: 80%;
+    font-family:@MS PGothic;
+    font-style:oblique;
+    color:Green;
+}
+.playscount
+{
+    font-size: 70%;
+    font-family:@SimSun-ExtB;
+    font-style:normal;
+    color:Red;
+}
+.dowloads
+{
+    font-size: 100%;
+    font-family:@Arial Unicode MS;
+    font-style:inherit;
+    color:Purple;
+}
+ 
+/*==================================ДИАГРАММА АКТИВНОСТИ==========================*/ 
+.diagramm
+{
+    width: 90%;
+    height:90px;
+    background-color:Menu;
+    border: 2px solid #1139ee;
+    display:none;
+    margin-top:20px;
+}
+ 
+/*==================================ФОРМА ДЛЯ ПОИСКА==============================*/ 
+
+#appendedInputButtons, .input-append
+ {
+     width:100%;
+ } 
+ .platform
+ {  
+    padding: 30px 110px 10px 50px;   
+    background-color: #eeeeee;
+    border: 2px solid #111;  
+    border-radius: 25px;  
+ } 
+ 
+ /*==========================КОНТРОЛЫ=========================*/
+fieldset 
+{
+    border: 1px solid #ddd;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
+}
+
+legend 
+{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+textarea 
+{
+    min-height: 75px;
+}
+/*=======================ТАБЛИЦА=================================*/ 
+.clear
+ {
+    clear: both;
+}
+.error 
+{
+    color: Red;
+}
+#logindisplay a:hover 
+{
+    color: white;
+    text-decoration: none;
+} 
+.field-validation-error 
+{
+        color: #ff0000;
+}
+.field-validation-valid 
+{
+    display: none;
+}
+.input-validation-error 
+{
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+.validation-summary-errors 
+{
+    font-weight: bold;
+    color: #ff0000;
+}
+.validation-summary-valid 
+{
+    display: none;
+}
+
+ 
+
+
+ 
+
