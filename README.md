@@ -1,5 +1,2 @@
-# CpOsVb
-##Course project on optimization of solution.
-###Methods:
-1. Bisection
-2. Gradient with fixed step
+# BadmusicNET
+####Course project. Web application on ASP.NET 4. Simple music site.
